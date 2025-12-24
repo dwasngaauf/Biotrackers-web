@@ -306,10 +306,10 @@ nav a {
   background-image: url("assets/battery.svg");
 }
 
-/* TEXT – CHỐT HẠ Ở ĐÂY */
+/* TEXT */
 .feature-text {
   display: flex;
-  flex-direction: column; /* <<< CÁI QUAN TRỌNG */
+  flex-direction: column;
 }
 
 .feature-text .title {
@@ -327,6 +327,23 @@ nav a {
 .btn-primary {
   display: block;
   margin: 40px auto 0;
+}
+
+/* ==== RESPONSIVE ==== */
+@media screen and (max-width: 768px) {
+  .product-overview {
+    grid-template-columns: 1fr; /* 1 cột */
+    padding: 40px 5%;
+  }
+
+  .feature-list {
+    grid-template-columns: 1fr; /* 1 cột cho features */
+    gap: 24px;
+  }
+
+  .feature-list li {
+    flex-direction: row; /* vẫn icon + text ngang nhau */
+  }
 }
 
 
@@ -408,3 +425,4 @@ nav a {
     height: 260px;
   }
 }
+
