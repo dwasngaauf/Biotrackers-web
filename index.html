@@ -242,19 +242,52 @@
 </section>
 
 <section id="usage-video">
-  <h2>Hướng dẫn sử dụng ReTrack</h2>
+  <h2>
+    Hướng dẫn sử dụng ReTrack<br>
+    Coming soon...
+  </h2>
 
   <div class="usage-content">
     <div class="usage-video">
+      <!-- Video iframe -->
       <iframe
-        src="https://www.youtube.com/embed/Yw9Ra2UiVLw?si=bqngPLSuFQpYmnF8"
-        title="Hướng dẫn sử dụng ReTrack"
+        id="retrack-video"
+        src="httpjkb"
+        title=
+        "Hướng dẫn sử dụng ReTrack"
         frameborder="0"
         allowfullscreen>
       </iframe>
+
+      <!-- Fallback text -->
+      <div id="coming-soon" style="display:none; text-align:center; padding:40px; font-size:1.2rem; color:#555;">
+        Coming Soon
+      </div>
     </div>
   </div>
 </section>
+
+<script>
+  function showComingSoon() {
+    document.getElementById('retrack-video').style.display = 'none';
+    document.getElementById('coming-soon').style.display = 'block';
+  }
+
+  // Thêm fallback nếu iframe fail load
+  const video = document.getElementById('retrack-video');
+
+  // Nếu video bị lỗi load, hiển thị "Coming Soon"
+  video.addEventListener('error', showComingSoon);
+
+  // Một số trình duyệt không trigger error cho iframe, thử fallback sau 3s
+  setTimeout(() => {
+    const iframeDocument = video.contentDocument || video.contentWindow.document;
+    if (!iframeDocument || iframeDocument.body.innerHTML.trim() === '') {
+      showComingSoon();
+    }
+  }, 3000);
+</script>
+
 
 <footer id="footer">
   <div class="footer-container">
