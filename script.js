@@ -6,51 +6,66 @@ const navLinks = document.querySelectorAll('.nav-links a');
 const nav = document.querySelector('nav');
 
 window.addEventListener('scroll', () => {
-  // Highlight active nav link based on scroll
   let current = '';
   sections.forEach(section => {
     const sectionTop = section.offsetTop - 80;
-    if (window.scrollY >= sectionTop) {
-      current = section.getAttribute('id');
-    }
+    if (window.scrollY >= sectionTop) current = section.getAttribute('id');
   });
   navLinks.forEach(link => {
     link.classList.remove('active');
-    if (link.getAttribute('href') === `#${current}`) {
-      link.classList.add('active');
-    }
+    if (link.getAttribute('href') === `#${current}`) link.classList.add('active');
   });
 
-  // Navbar background on scroll
-  if (window.scrollY > 10) {
-    nav.style.background = 'rgba(8,16,43,0.98)';
-  } else {
-    nav.style.background = 'rgba(8,16,43,0.9)';
-  }
+  nav.style.background = window.scrollY > 10
+    ? 'rgba(8,16,43,0.98)'
+    : 'rgba(8,16,43,0.9)';
 });
 
 
 /* ═══════════════════════════════════════════
-   HERO — Video modal
+   HERO — YouTube Video Modal
+   Cách dùng:
+   1. Lấy video ID từ link YouTube
+      VD: https://youtu.be/ABC123xyz → ID là "ABC123xyz"
+   2. Dán ID vào data-yt-id trong #videoModal ở HTML
+      VD: <div id="videoModal" data-yt-id="ABC123xyz">
 ═══════════════════════════════════════════ */
+const videoModal = document.getElementById('videoModal');
+const ytPlayer   = document.getElementById('ytPlayer');
+const videoContainer = document.getElementById('videoContainer');
+
 function openVideo(e) {
   e.preventDefault();
-  const modal = document.getElementById('videoModal');
-  const video = document.getElementById('myVideo');
-  modal.style.display = 'flex';
-  video.play();
+
+  const ytId = videoModal.getAttribute('data-yt-id') || '';
+  if (!ytId) {
+    console.warn('Chưa gắn YouTube ID vào data-yt-id!');
+    return;
+  }
+
+  // autoplay=1 → tự phát, mute=0 → có tiếng
+  ytPlayer.src = `https://www.youtube.com/embed/${ytId}?autoplay=1&rel=0`;
+  videoModal.classList.add('active');
+  videoModal.style.display = 'flex';
+  document.body.style.overflow = 'hidden';
 }
 
 function closeVideo() {
-  const modal = document.getElementById('videoModal');
-  const video = document.getElementById('myVideo');
-  modal.style.display = 'none';
-  video.pause();
-  video.currentTime = 0;
+  // Xoá src để dừng hẳn video + tắt tiếng
+  ytPlayer.src = '';
+  videoModal.classList.remove('active');
+  videoModal.style.display = 'none';
+  document.body.style.overflow = '';
 }
 
-document.getElementById('videoModal').addEventListener('click', function(e) {
-  if (e.target === this) closeVideo();
+// Click ra ngoài video container → đóng
+videoModal.addEventListener('click', function(e) {
+  if (!videoContainer.contains(e.target)) closeVideo();
+});
+
+// Phím ESC → đóng
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') closeVideo();
 });
 
 
@@ -64,12 +79,12 @@ const gh = `<svg viewBox="0 0 24 24" fill="#ffffff"><path d="M12 0C5.37 0 0 5.37
 const ig = `<svg viewBox="0 0 24 24" fill="#E1306C"><path d="M7.75 2C4.57 2 2 4.57 2 7.75v8.5C2 19.43 4.57 22 7.75 22h8.5C19.43 22 22 19.43 22 16.25v-8.5C22 4.57 19.43 2 16.25 2h-8.5zm0 2h8.5C18.22 4 20 5.78 20 7.75v8.5c0 1.97-1.78 3.75-3.75 3.75h-8.5C5.78 20 4 18.22 4 16.25v-8.5C4 5.78 5.78 4 7.75 4zm8.75 1.5a1.25 1.25 0 100 2.5 1.25 1.25 0 000-2.5zM12 7a5 5 0 100 10 5 5 0 000-10zm0 2a3 3 0 110 6 3 3 0 010-6z"/></svg>`;
 
 const members = [
-  { name: "Phan Quốc Chiến",      role: "CEO", img: "assets/Chiến.jpg",    init: "Phan Quốc Chiến",      fb: "https://www.facebook.com/phan.chien.789760?locale=vi_VN",         li: "https://www.linkedin.com/in/phan-chi%E1%BA%BFn-621395321/" },
-  { name: "Chu Đắc Vinh Quang",   role: "CTO", img: "assets/Quang.jpg",    init: "Chu Đắc Vinh Quang",   fb: "https://www.facebook.com/quang.chudacvinh?locale=vi_VN",           gh: "https://github.com/1m4n00b6292" },
-  { name: "Nguyễn Nam Thành",      role: "Embedded Systems & Software Engineering", img: "assets/Thành.jpg", init: "Nguyễn Nam Thành", fb: "https://www.facebook.com/thanh.nguyennam.31521?locale=vi_VN", gh: "https://github.com/namthanh82" },
-  { name: "Bùi Thị Khánh Linh",   role: "CMO", img: "assets/Linh.jpg",    init: "Bùi Thị Khánh Linh",   fb: "https://www.facebook.com/khanhlinh.05062005?locale=vi_VN",         ig: "https://www.instagram.com/_khanh.linh.56_/" },
-  { name: "Phùng Tuấn Anh",       role: "CFO", img: "assets/TuấnAnh.png", init: "Phùng Tuấn Anh",       fb: "https://www.facebook.com/tuananhhh27?locale=vi_VN",                ig: "https://www.instagram.com/phgtuananh" },
-  { name: "Đặng Quỳnh Dương",     role: "AI & Software Engineering", img: "assets/Dương.jpg", init: "Quỳnh Dương", fb: "https://www.facebook.com/quuuuuuuuynhduuuuuuuuong/?locale=vi_VN", gh: "https://github.com/dwasngaauf" },
+  { name: "Phan Quốc Chiến",    role: "CEO", img: "assets/Chiến.jpg",    init: "Phan Quốc Chiến",    fb: "https://www.facebook.com/phan.chien.789760?locale=vi_VN",          li: "https://www.linkedin.com/in/phan-chi%E1%BA%BFn-621395321/" },
+  { name: "Chu Đắc Vinh Quang", role: "CTO", img: "assets/Quang.jpg",    init: "Chu Đắc Vinh Quang", fb: "https://www.facebook.com/quang.chudacvinh?locale=vi_VN",            gh: "https://github.com/1m4n00b6292" },
+  { name: "Nguyễn Nam Thành",   role: "Embedded Systems & Software Engineering", img: "assets/Thành.jpg", init: "Nguyễn Nam Thành", fb: "https://www.facebook.com/thanh.nguyennam.31521?locale=vi_VN", gh: "https://github.com/namthanh82" },
+  { name: "Bùi Thị Khánh Linh", role: "CMO", img: "assets/Linh.jpg",    init: "Bùi Thị Khánh Linh", fb: "https://www.facebook.com/khanhlinh.05062005?locale=vi_VN",          ig: "https://www.instagram.com/_khanh.linh.56_/" },
+  { name: "Phùng Tuấn Anh",     role: "CFO", img: "assets/TuấnAnh.png", init: "Phùng Tuấn Anh",     fb: "https://www.facebook.com/tuananhhh27?locale=vi_VN",                ig: "https://www.instagram.com/phgtuananh" },
+  { name: "Đặng Quỳnh Dương",   role: "AI & Software Engineering", img: "assets/Dương.jpg", init: "Quỳnh Dương", fb: "https://www.facebook.com/quuuuuuuuynhduuuuuuuuong/?locale=vi_VN", gh: "https://github.com/dwasngaauf" },
 ];
 
 const grid = document.getElementById('g');
@@ -109,7 +124,7 @@ const featuredAdvisor = {
   name: "PGS.TS Nguyễn Thành Trung",
   role: "Khoa Cơ khí Chế tạo máy, Trường Cơ khí, Đại học Bách Khoa Hà Nội",
   init: "PGS.TS",
-  img: "assets/Thầy.png",
+  img:  "assets/Thầy.png",
   desc: [
     "09/2012 - 08/2015: Nghiên cứu sinh tại Học viện công nghệ Shibaura, Nhật Bản",
     "09/2011 - 08/2012: Thạc sỹ tại Học viện công nghệ Shibaura, Nhật Bản",
@@ -120,18 +135,8 @@ const featuredAdvisor = {
 };
 
 const advisors = [
-  {
-    name: "Bác sĩ Nguyễn Văn Đương",
-    role: "Trưởng khoa An dưỡng Bệnh viện PHCN Hải Dương",
-    init: "BS",
-    img: "assets/Nguyễn Văn Đương.jpg"
-  },
-  {
-    name: "Ths. BS Nguyễn Hữu Đức Minh",
-    role: "Giảng viên Đại học Y dược TP. HCM 2013–2021",
-    init: "BS",
-    img: "assets/Bác sĩ Minh.jpg"
-  },
+  { name: "Bác sĩ Nguyễn Văn Đương",    role: "Trưởng khoa An dưỡng Bệnh viện PHCN Hải Dương",     init: "BS", img: "assets/Nguyễn Văn Đương.jpg" },
+  { name: "Ths. BS Nguyễn Hữu Đức Minh", role: "Giảng viên Đại học Y dược TP. HCM 2013–2021",        init: "BS", img: "assets/Bác sĩ Minh.jpg" },
 ];
 
 const f = featuredAdvisor;
@@ -148,10 +153,7 @@ document.getElementById('featured').innerHTML = `
     <h3>${f.name}</h3>
     <div class="role">${f.role}</div>
     <div class="desc">${f.desc.map(d => `<p>• ${d}</p>`).join('')}</div>
-    <div class="email-row">
-      ${iconEmail}
-      <a href="mailto:${f.email}">${f.email}</a>
-    </div>
+    <div class="email-row">${iconEmail}<a href="mailto:${f.email}">${f.email}</a></div>
   </div>`;
 
 const advisorGrid = document.getElementById('advisor-grid');
@@ -179,7 +181,7 @@ advisors.forEach(m => {
    ACHIEVEMENTS — Slider
 ═══════════════════════════════════════════ */
 const track = document.getElementById('sliderTrack');
-const cards = document.querySelectorAll('.ach-card');
+const achCards = document.querySelectorAll('.ach-card');
 const prevBtn = document.getElementById('prevBtn');
 const nextBtn = document.getElementById('nextBtn');
 const dotsContainer = document.getElementById('dotsContainer');
@@ -195,13 +197,12 @@ function getVisible() {
   return 4;
 }
 
-const totalCards = cards.length;
+const totalCards = achCards.length;
 function maxIndex() { return totalCards - visibleCount; }
 
 function buildDots() {
   dotsContainer.innerHTML = '';
-  const total = maxIndex() + 1;
-  for (let i = 0; i < total; i++) {
+  for (let i = 0; i <= maxIndex(); i++) {
     const dot = document.createElement('div');
     dot.className = 'dot' + (i === current ? ' active' : '');
     dot.onclick = () => goTo(i);
@@ -210,14 +211,10 @@ function buildDots() {
 }
 
 function updateDots() {
-  document.querySelectorAll('.dot').forEach((d, i) => {
-    d.classList.toggle('active', i === current);
-  });
+  document.querySelectorAll('.dot').forEach((d, i) => d.classList.toggle('active', i === current));
 }
 
-function getCardWidth() {
-  return cards[0].offsetWidth + 24;
-}
+function getCardWidth() { return achCards[0].offsetWidth + 24; }
 
 function goTo(index) {
   current = Math.max(0, Math.min(index, maxIndex()));
@@ -238,7 +235,7 @@ window.addEventListener('resize', () => {
   goTo(Math.min(current, maxIndex()));
 });
 
-cards.forEach(card => {
+achCards.forEach(card => {
   const link = card.querySelector('.read-more');
   card.addEventListener('click', (e) => {
     if (!e.target.closest('.read-more')) link.click();
@@ -258,7 +255,7 @@ const tooltipData = {
   cloud: { title: "Quản lý Dữ liệu Đám Mây (Cloud)",             body: "Lưu trữ hồ sơ bệnh án điện tử tập trung, hỗ trợ bác sĩ theo dõi tiến trình phục hồi của bệnh nhân từ xa theo thời gian thực." }
 };
 
-const tip = document.getElementById('tip');
+const tip     = document.getElementById('tip');
 const diagram = document.querySelector('.diagram');
 
 document.querySelectorAll('.node-icon').forEach(node => {
@@ -266,7 +263,7 @@ document.querySelectorAll('.node-icon').forEach(node => {
     const d = tooltipData[this.getAttribute('data-id')];
     if (!d) return;
     document.getElementById('tip-title').textContent = d.title;
-    document.getElementById('tip-body').textContent = d.body;
+    document.getElementById('tip-body').textContent  = d.body;
     const svgRect = diagram.getBoundingClientRect();
     const nr = this.getBoundingClientRect();
     let left = nr.left - svgRect.left + nr.width / 2 - 97;
@@ -285,10 +282,7 @@ document.querySelectorAll('.node-icon').forEach(node => {
    FOOTER — Link click logger
 ═══════════════════════════════════════════ */
 document.addEventListener("DOMContentLoaded", () => {
-  const footerLinks = document.querySelectorAll(".footer a");
-  footerLinks.forEach(link => {
-    link.addEventListener("click", () => {
-      console.log("Clicked:", link.textContent);
-    });
+  document.querySelectorAll(".footer a").forEach(link => {
+    link.addEventListener("click", () => console.log("Clicked:", link.textContent));
   });
 });

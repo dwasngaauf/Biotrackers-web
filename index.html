@@ -18,10 +18,8 @@
 <body>
 
 <!-- ══════════════════════════════════════
-     HERO SECTION
+     TOP BAR
 ══════════════════════════════════════ -->
-
-<!-- TOP BAR -->
 <div class="topbar">
   <div class="topbar-left">
     <span>✉ biotrackers2025@gmail.com</span>
@@ -42,7 +40,9 @@
   </div>
 </div>
 
-<!-- NAVBAR -->
+<!-- ══════════════════════════════════════
+     NAVBAR
+══════════════════════════════════════ -->
 <nav>
   <a class="logo" href="#">
     <div class="logo-box">
@@ -66,7 +66,9 @@
   </div>
 </nav>
 
-<!-- HERO -->
+<!-- ══════════════════════════════════════
+     HERO
+══════════════════════════════════════ -->
 <section class="hero" id="hero">
   <div class="hero-bg"></div>
   <div class="accent-tl"></div>
@@ -87,14 +89,23 @@
       Explore More
     </a>
   </div>
-
-  <!-- Video Modal -->
-  <div id="videoModal" class="video-modal">
-    <div class="video-container">
-      <video id="myVideo" src="assets/biotrackers.mp4" controls></video>
-    </div>
-  </div>
 </section>
+
+<!-- ══════════════════════════════════════
+     YOUTUBE VIDEO MODAL
+     Dán YouTube video ID vào data-yt-id
+     Ví dụ: data-yt-id="dQw4w9WgXcQ"
+══════════════════════════════════════ -->
+<div id="videoModal" class="video-modal" data-yt-id="<iframe width="560" height="315" src="https://www.youtube.com/embed/S100VXZN4R8?si=cZ7XXcV1P61kWiKW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>">
+  <div class="video-container" id="videoContainer">
+    <iframe
+      id="ytPlayer"
+      src=""
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen>
+    </iframe>
+  </div>
+</div>
 
 
 <!-- ══════════════════════════════════════
@@ -141,14 +152,11 @@
     <div class="slider-track-outer">
       <div class="slider-track" id="sliderTrack">
 
-        <!-- Card 1 -->
         <div class="ach-card">
           <div class="card-img-placeholder">
             <img src="assets/STT.jpg" class="card-img">
             <div class="card-overlay">
-              <a href="https://www.facebook.com/share/p/1HNRuLTrUy/" target="_blank" class="card-overlay-icon">
-                <i class="fas fa-external-link-alt"></i>
-              </a>
+              <a href="https://www.facebook.com/share/p/1HNRuLTrUy/" target="_blank" class="card-overlay-icon"><i class="fas fa-external-link-alt"></i></a>
             </div>
           </div>
           <div class="card-body">
@@ -159,14 +167,11 @@
           </div>
         </div>
 
-        <!-- Card 2 -->
         <div class="ach-card">
           <div class="card-img-placeholder">
             <img src="assets/demoday.jpg" class="card-img">
             <div class="card-overlay">
-              <a href="https://www.facebook.com/share/p/1QUYv4w3P7/" target="_blank" class="card-overlay-icon">
-                <i class="fas fa-external-link-alt"></i>
-              </a>
+              <a href="https://www.facebook.com/share/p/1QUYv4w3P7/" target="_blank" class="card-overlay-icon"><i class="fas fa-external-link-alt"></i></a>
             </div>
           </div>
           <div class="card-body">
@@ -177,14 +182,11 @@
           </div>
         </div>
 
-        <!-- Card 3 -->
         <div class="ach-card">
           <div class="card-img-placeholder">
             <img src="assets/Vinmotionlab.png" class="card-img">
             <div class="card-overlay">
-              <a href="https://hust.edu.vn/vi/news/..." target="_blank" class="card-overlay-icon">
-                <i class="fas fa-external-link-alt"></i>
-              </a>
+              <a href="#" target="_blank" class="card-overlay-icon"><i class="fas fa-external-link-alt"></i></a>
             </div>
           </div>
           <div class="card-body">
@@ -195,32 +197,26 @@
           </div>
         </div>
 
-        <!-- Card 4 -->
         <div class="ach-card">
           <div class="card-img-placeholder">
             <img src="assets/ichst.jpg" class="card-img">
             <div class="card-overlay">
-              <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=11428761" target="_blank" class="card-overlay-icon">
-                <i class="fas fa-external-link-alt"></i>
-              </a>
+              <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=11428761" target="_blank" class="card-overlay-icon"><i class="fas fa-external-link-alt"></i></a>
             </div>
           </div>
           <div class="card-body">
             <span class="card-badge">Nghiên cứu</span>
             <h3 class="card-title">Bài báo về hệ thống IMU được chấp nhận trình bày tại ICHST 2025</h3>
-            <p class="card-desc">Việc được hội nghị quốc tế chấp nhận không chỉ khẳng định tính mới và giá trị khoa học của nghiên cứu, mà còn mở ra cơ hội trao đổi học thuật, tiếp cận cộng đồng chuyên gia.</p>
+            <p class="card-desc">Việc được hội nghị quốc tế chấp nhận không chỉ khẳng định tính mới và giá trị khoa học của nghiên cứu, mà còn mở ra cơ hội trao đổi học thuật.</p>
             <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=11428761" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
           </div>
         </div>
 
-        <!-- Card 5 -->
         <div class="ach-card">
           <div class="card-img-placeholder">
             <img src="assets/ventureday.jpg" class="card-img">
             <div class="card-overlay">
-              <a href="https://hust.edu.vn/vi/news/..." target="_blank" class="card-overlay-icon">
-                <i class="fas fa-external-link-alt"></i>
-              </a>
+              <a href="#" target="_blank" class="card-overlay-icon"><i class="fas fa-external-link-alt"></i></a>
             </div>
           </div>
           <div class="card-body">
@@ -231,14 +227,11 @@
           </div>
         </div>
 
-        <!-- Card 6 -->
         <div class="ach-card">
           <div class="card-img-placeholder">
             <img src="assets/univentures.jpg" class="card-img">
             <div class="card-overlay">
-              <a href="https://www.facebook.com/share/p/1BCS3eZiW4/" target="_blank" class="card-overlay-icon">
-                <i class="fas fa-external-link-alt"></i>
-              </a>
+              <a href="https://www.facebook.com/share/p/1BCS3eZiW4/" target="_blank" class="card-overlay-icon"><i class="fas fa-external-link-alt"></i></a>
             </div>
           </div>
           <div class="card-body">
@@ -249,32 +242,26 @@
           </div>
         </div>
 
-        <!-- Card 7 -->
         <div class="ach-card">
           <div class="card-img-placeholder">
             <img src="assets/svstartup.jpg" class="card-img">
             <div class="card-overlay">
-              <a href="https://www.facebook.com/share/p/18DJa6y8pQ/" target="_blank" class="card-overlay-icon">
-                <i class="fas fa-external-link-alt"></i>
-              </a>
+              <a href="https://www.facebook.com/share/p/18DJa6y8pQ/" target="_blank" class="card-overlay-icon"><i class="fas fa-external-link-alt"></i></a>
             </div>
           </div>
           <div class="card-body">
             <span class="card-badge">Giải thưởng</span>
             <h3 class="card-title">Tiến vào vòng chung kết SV.STARTUP lần thứ VIII</h3>
-            <p class="card-desc">Một trong hai đội thi xuất sắc nhất đến từ Đại học Bách khoa Hà Nội ghi tên mình vào vòng Chung kết cuộc thi "Học sinh, sinh viên với ý tưởng khởi nghiệp" lần thứ VIII.</p>
+            <p class="card-desc">Một trong hai đội thi xuất sắc nhất đến từ Đại học Bách khoa Hà Nội ghi tên mình vào vòng Chung kết SV.STARTUP lần thứ VIII.</p>
             <a href="https://www.facebook.com/share/p/18DJa6y8pQ/" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
           </div>
         </div>
 
-        <!-- Card 8 -->
         <div class="ach-card">
           <div class="card-img-placeholder">
             <img src="assets/dmst.jpg" class="card-img">
             <div class="card-overlay">
-              <a href="https://hust.edu.vn/vi/news/khoa-hoc-cong-nghe-dmst/dai-hoc-bach-khoa-ha-noi-dong-hanh-cung-hanh-trinh-doi-moi-sang-tao-thu-do-655744.html" target="_blank" class="card-overlay-icon">
-                <i class="fas fa-external-link-alt"></i>
-              </a>
+              <a href="https://hust.edu.vn/vi/news/khoa-hoc-cong-nghe-dmst/dai-hoc-bach-khoa-ha-noi-dong-hanh-cung-hanh-trinh-doi-moi-sang-tao-thu-do-655744.html" target="_blank" class="card-overlay-icon"><i class="fas fa-external-link-alt"></i></a>
             </div>
           </div>
           <div class="card-body">
@@ -285,10 +272,9 @@
           </div>
         </div>
 
-      </div><!-- end slider-track -->
-    </div><!-- end slider-track-outer -->
+      </div>
+    </div>
 
-    <!-- Navigation -->
     <div class="slider-nav">
       <button class="nav-btn" id="prevBtn" onclick="slide(-1)" disabled></button>
       <div class="slider-dots" id="dotsContainer"></div>
@@ -358,7 +344,7 @@
           <rect class="bg" x="20" y="152" width="58" height="58" rx="10"/>
           <image href="assets/imu.svg" x="28" y="160" width="42" height="42"/>
         </g>
-        <text font-family="Segoe UI,sans-serif">
+        <text font-family="Be Vietnam Pro,sans-serif">
           <tspan x="88" y="171" font-size="12" font-weight="700" fill="#ffffff">Hệ thống cảm biến</tspan>
           <tspan x="88" dy="16" font-size="13" font-weight="900" fill="#38bdf8">IMU</tspan>
           <tspan x="88" dy="14" font-size="10" fill="#94a3b8">Góc khớp &amp; dáng đi</tspan>
@@ -369,7 +355,7 @@
           <rect class="bg" x="700" y="130" width="58" height="58" rx="10"/>
           <image href="assets/ecg.svg" x="708" y="138" width="42" height="42"/>
         </g>
-        <text font-family="Segoe UI,sans-serif" text-anchor="end">
+        <text font-family="Be Vietnam Pro,sans-serif" text-anchor="end">
           <tspan x="692" y="147" font-size="12" font-weight="700" fill="#ffffff">Hệ thống cảm biến</tspan>
           <tspan x="692" dy="16" font-size="13" font-weight="900" fill="#38bdf8">ECG</tspan>
           <tspan x="692" dy="14" font-size="10" fill="#94a3b8">Nhịp tim 24/7</tspan>
@@ -380,7 +366,7 @@
           <rect class="bg" x="20" y="278" width="58" height="58" rx="10"/>
           <image href="assets/emg.svg" x="28" y="286" width="42" height="42"/>
         </g>
-        <text font-family="Segoe UI,sans-serif">
+        <text font-family="Be Vietnam Pro,sans-serif">
           <tspan x="88" y="295" font-size="12" font-weight="700" fill="#ffffff">Hệ thống cảm biến</tspan>
           <tspan x="88" dy="16" font-size="13" font-weight="900" fill="#38bdf8">EMG</tspan>
           <tspan x="88" dy="14" font-size="10" fill="#94a3b8">Hoạt động cơ bắp</tspan>
@@ -391,7 +377,7 @@
           <rect class="bg" x="700" y="278" width="58" height="58" rx="10"/>
           <image href="assets/digitaltwins.svg" x="708" y="286" width="42" height="42"/>
         </g>
-        <text font-family="Segoe UI,sans-serif" text-anchor="end">
+        <text font-family="Be Vietnam Pro,sans-serif" text-anchor="end">
           <tspan x="692" y="293" font-size="12" font-weight="700" fill="#ffffff">Digital Twin</tspan>
           <tspan x="692" dy="16" font-size="13" font-weight="900" fill="#38bdf8">3D Real-time</tspan>
           <tspan x="692" dy="14" font-size="10" fill="#94a3b8">Bản sao số bệnh nhân</tspan>
@@ -402,7 +388,7 @@
           <rect class="bg" x="20" y="398" width="58" height="58" rx="10"/>
           <image href="assets/ai_icon.svg" x="28" y="406" width="42" height="42"/>
         </g>
-        <text font-family="Segoe UI,sans-serif">
+        <text font-family="Be Vietnam Pro,sans-serif">
           <tspan x="88" y="415" font-size="12" font-weight="700" fill="#ffffff">Trí Tuệ Nhân Tạo</tspan>
           <tspan x="88" dy="16" font-size="13" font-weight="900" fill="#38bdf8">(AI)</tspan>
           <tspan x="88" dy="14" font-size="10" fill="#94a3b8">Phân tích chuyên sâu</tspan>
@@ -413,7 +399,7 @@
           <rect class="bg" x="700" y="398" width="58" height="58" rx="10"/>
           <image href="assets/cloud_icon.svg" x="708" y="406" width="42" height="42"/>
         </g>
-        <text font-family="Segoe UI,sans-serif" text-anchor="end">
+        <text font-family="Be Vietnam Pro,sans-serif" text-anchor="end">
           <tspan x="692" y="415" font-size="12" font-weight="700" fill="#ffffff">Quản lý Dữ liệu</tspan>
           <tspan x="692" dy="16" font-size="13" font-weight="900" fill="#38bdf8">Đám Mây (Cloud)</tspan>
           <tspan x="692" dy="14" font-size="10" fill="#94a3b8">Lưu trữ &amp; theo dõi xa</tspan>
