@@ -77,7 +77,7 @@ const fb = `<svg viewBox="0 0 24 24" fill="#1877F2"><path d="M24 12.073c0-6.627-
 const li = `<svg viewBox="0 0 24 24" fill="#0A66C2"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 110-4.12 2.06 2.06 0 010 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>`;
 const gh = `<svg viewBox="0 0 24 24" fill="#ffffff"><path d="M12 0C5.37 0 0 5.37 0 12a12 12 0 008.2 11.39c.6.11.82-.26.82-.58v-2.23c-3.34.73-4.04-1.61-4.04-1.61-.55-1.4-1.34-1.78-1.34-1.78-1.1-.75.08-.74.08-.74 1.21.09 1.84 1.25 1.84 1.25 1.08 1.85 2.83 1.31 3.52 1 .11-.78.42-1.31.76-1.61-2.66-.3-5.46-1.33-5.46-5.92 0-1.31.47-2.38 1.24-3.22-.12-.3-.54-1.52.12-3.17 0 0 1-.32 3.3 1.23a11.5 11.5 0 016 0c2.3-1.55 3.3-1.23 3.3-1.23.66 1.65.24 2.87.12 3.17.77.84 1.24 1.91 1.24 3.22 0 4.6-2.8 5.62-5.47 5.92.43.37.82 1.1.82 2.22v3.29c0 .32.22.7.83.58A12 12 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>`;
 const ig = `<svg viewBox="0 0 24 24" fill="#E1306C"><path d="M7.75 2C4.57 2 2 4.57 2 7.75v8.5C2 19.43 4.57 22 7.75 22h8.5C19.43 22 22 19.43 22 16.25v-8.5C22 4.57 19.43 2 16.25 2h-8.5zm0 2h8.5C18.22 4 20 5.78 20 7.75v8.5c0 1.97-1.78 3.75-3.75 3.75h-8.5C5.78 20 4 18.22 4 16.25v-8.5C4 5.78 5.78 4 7.75 4zm8.75 1.5a1.25 1.25 0 100 2.5 1.25 1.25 0 000-2.5zM12 7a5 5 0 100 10 5 5 0 000-10zm0 2a3 3 0 110 6 3 3 0 010-6z"/></svg>`;
-
+const threads = `<svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.3 11.1c-.1 0-.2 0-.3.1-.2-1.3-.7-2.3-1.5-3-.9-.8-2.1-1.2-3.7-1.2-2.8 0-4.6 1.5-4.8 4h2.2c.2-1.2 1-2 2.5-2 .9 0 1.6.2 2.1.7.4.4.7 1 .8 1.8-1.2-.2-2.4-.2-3.5.1-2 .5-3.2 1.8-3.2 3.6 0 2.1 1.7 3.6 4.2 3.6 2 0 3.5-.9 4.2-2.4.5-1 .7-2.1.7-3.3.6.2 1 .7 1 1.4 0 1.3-1.2 2.6-3.3 3.2l.7 1.9c3-.8 4.8-2.8 4.8-5.1 0-2-1.4-3.4-3.1-3.4zm-4.9 5.6c-1.2 0-2-.6-2-1.6 0-.9.7-1.5 1.9-1.8.8-.2 1.8-.2 2.9 0 0 .9-.1 1.7-.5 2.3-.4.7-1.1 1.1-2.3 1.1z"/><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.6 0 12 0zm0 22C6.5 22 2 17.5 2 12S6.5 2 12 2s10 4.5 10 10-4.5 10-10 10z"/></svg>`;
 const members = [
   { name: "Phan Quốc Chiến",    role: "CEO", img: "assets/Chiến.jpg",    init: "Phan Quốc Chiến",    fb: "https://www.facebook.com/phan.chien.789760?locale=vi_VN",          li: "https://www.linkedin.com/in/phan-chi%E1%BA%BFn-621395321/" },
   { name: "Chu Đắc Vinh Quang", role: "CTO", img: "assets/Quang.jpg",    init: "Chu Đắc Vinh Quang", fb: "https://www.facebook.com/quang.chudacvinh?locale=vi_VN",            gh: "https://github.com/1m4n00b6292" },
@@ -85,6 +85,9 @@ const members = [
   { name: "Bùi Thị Khánh Linh", role: "CMO", img: "assets/Linh.jpg",    init: "Bùi Thị Khánh Linh", fb: "https://www.facebook.com/khanhlinh.05062005?locale=vi_VN",          ig: "https://www.instagram.com/_khanh.linh.56_/" },
   { name: "Phùng Tuấn Anh",     role: "CFO", img: "assets/TuấnAnh.png", init: "Phùng Tuấn Anh",     fb: "https://www.facebook.com/tuananhhh27?locale=vi_VN",                ig: "https://www.instagram.com/phgtuananh" },
   { name: "Đặng Quỳnh Dương",   role: "AI & Software Engineering", img: "assets/Dương.jpg", init: "Quỳnh Dương", fb: "https://www.facebook.com/quuuuuuuuynhduuuuuuuuong/?locale=vi_VN", gh: "https://github.com/dwasngaauf" },
+  { name: "Nguyễn Thị Hoài Thanh",   role: "Marketing & Sale", img: "assets/Thanh.jpg", init: "Hoài Thanh", fb: "https://www.facebook.com/hthanhhhhhhhhhh?locale=vi_VN",},
+  { name: "Mai Lê Phú Quang",   role: "AI & Software Engineering", img: "assets/quang2.jpg", init: "Quỳnh Dương", fb: "https://www.facebook.com/quuuuuuuuynhduuuuuuuuong/?locale=vi_VN", gh: "https://github.com/dwasngaauf" },
+  { name: "Vũ Hải Đăng",   role: "PCB Design Engineer", img: "assets/Đăng.jpg", init: "Quỳnh Dương", fb: "https://www.facebook.com/vu.dang.vu.dang.2025?locale=vi_VN", threads: "https://www.threads.com/@im_dangy_dang" },
 ];
 
 const grid = document.getElementById('g');
@@ -109,10 +112,12 @@ members.forEach(m => {
         ${m.li ? `<a class="sb" href="${m.li}" target="_blank">${li}</a>` : ""}
         ${m.gh ? `<a class="sb" href="${m.gh}" target="_blank">${gh}</a>` : ""}
         ${m.ig ? `<a class="sb" href="${m.ig}" target="_blank">${ig}</a>` : ""}
+        ${m.threads ? `<a class="sb" href="${m.threads}" target="_blank">${threads}</a>` : ""}
       </div>
     </div>`;
   grid.appendChild(c);
 });
+addRevealToCards('g');
 
 
 /* ═══════════════════════════════════════════
@@ -175,6 +180,7 @@ advisors.forEach(m => {
     </div>`;
   advisorGrid.appendChild(c);
 });
+addRevealToCards('advisor-grid');
 
 
 /* ═══════════════════════════════════════════
@@ -244,37 +250,82 @@ achCards.forEach(card => {
 
 
 /* ═══════════════════════════════════════════
-   RETRACK — Tooltip on hover
+   RETRACK — Hotspot hover
 ═══════════════════════════════════════════ */
-const tooltipData = {
-  imu:   { title: "Hệ thống cảm biến IMU",                       body: "Tại các khớp: vai, khuỷu tay, cổ tay, hông, đầu gối, cổ chân. Đo lường chính xác góc khớp, biên độ vận động (ROM) và phân tích dáng đi (Gait Analysis) để đánh giá khả năng vận động." },
-  ecg:   { title: "Hệ thống cảm biến ECG",                       body: "Vị trí trước ngực. Theo dõi nhịp tim và tín hiệu điện tim 24/7, đảm bảo an toàn tim mạch tuyệt đối và đánh giá mức độ gắng sức khi tập luyện." },
-  emg:   { title: "Hệ thống cảm biến EMG",                       body: "Trên các bắp cơ: bắp tay, đùi, bắp chân. Ghi nhận mức độ kích hoạt cơ, sự phối hợp giữa các nhóm cơ và phát hiện sớm tình trạng mỏi cơ hoặc co cứng." },
-  twin:  { title: "Bản Sao Số (Digital Twin) 3D Real-time",      body: "Tái hiện cử động của bệnh nhân một cách trực quan trên giao diện 3D, giúp bác sĩ dễ dàng phát hiện các sai lệch trong tư thế và động tác phục hồi." },
-  ai:    { title: "Trí Tuệ Nhân Tạo (AI) Phân Tích Chuyên Sâu", body: "Thuật toán AI đạt độ chính xác ≥94%, hỗ trợ dự báo rủi ro chấn thương và tự động hóa báo cáo phục hồi hàng ngày cho bác sĩ." },
-  cloud: { title: "Quản lý Dữ liệu Đám Mây (Cloud)",             body: "Lưu trữ hồ sơ bệnh án điện tử tập trung, hỗ trợ bác sĩ theo dõi tiến trình phục hồi của bệnh nhân từ xa theo thời gian thực." }
+const sensorData = {
+  shoulder: {
+    name: "IMU + EMG",
+    pos: "Vị trí: Vai",
+    icon: `<svg viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="1.8"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/><path d="M8 12h8M12 8v8"/></svg>`
+  },
+  upperarm: {
+    name: "IMU + EMG",
+    pos: "Vị trí: Bắp tay",
+    icon: `<svg viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="1.8"><rect x="7" y="2" width="10" height="20" rx="5"/></svg>`
+  },
+  chest: {
+    name: "ECG + IMU",
+    pos: "Vị trí: Ngực",
+    icon: `<svg viewBox="0 0 24 24" fill="none" stroke="#e11d48" stroke-width="1.8"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>`
+  },
+  forearm: {
+    name: "IMU + EMG",
+    pos: "Vị trí: Cổ tay",
+    icon: `<svg viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="1.8"><rect x="7" y="2" width="10" height="20" rx="5"/></svg>`
+  },
+  hip: {
+    name: "IMU + EMG",
+    pos: "Vị trí: Đùi trên",
+    icon: `<svg viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="1.8"><path d="M12 2v20M2 12h20"/></svg>`
+  },
+
+  naka: {
+    name: "IMU + EMG",
+    pos: "Vị trí: Bụng",
+    icon: `<svg viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="1.8"><path d="M12 2v20M2 12h20"/></svg>`
+  },
+
+  knee: {
+    name: "IMU + EMG",
+    pos: "Vị trí: Bắp chân",
+    icon: `<svg viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M9 12l2 2 4-4"/></svg>`
+  },
+  ankle: {
+    name: "IMU + EMG",
+    pos: "Vị trí: Bàn chân",
+    icon: `<svg viewBox="0 0 24 24" fill="none" stroke="#0ea5e9" stroke-width="1.8"><path d="M3 17l4-8 4 4 4-6 4 10"/></svg>`
+  }
 };
 
-const tip     = document.getElementById('tip');
-const diagram = document.querySelector('.diagram');
+const hotspots = document.querySelectorAll('.hotspot');
+const panelDefault = document.getElementById('panelDefault');
+const panelDetail  = document.getElementById('panelDetail');
 
-document.querySelectorAll('.node-icon').forEach(node => {
-  node.addEventListener('mouseenter', function() {
-    const d = tooltipData[this.getAttribute('data-id')];
-    if (!d) return;
-    document.getElementById('tip-title').textContent = d.title;
-    document.getElementById('tip-body').textContent  = d.body;
-    const svgRect = diagram.getBoundingClientRect();
-    const nr = this.getBoundingClientRect();
-    let left = nr.left - svgRect.left + nr.width / 2 - 97;
-    let top  = nr.top  - svgRect.top  + nr.height + 6;
-    left = Math.max(0, Math.min(left, diagram.offsetWidth - 205));
-    if (top + 150 > diagram.offsetHeight) top = nr.top - svgRect.top - 155;
-    tip.style.left = left + 'px';
-    tip.style.top  = top  + 'px';
-    tip.classList.add('show');
+function showSensor(key) {
+  const d = sensorData[key];
+  if (!d) return;
+
+  document.getElementById('panelIconWrap').innerHTML = d.icon;
+  document.getElementById('panelName').textContent = d.name;
+  document.getElementById('panelPos').textContent = d.pos;
+
+  panelDefault.style.display = 'none';
+  panelDetail.style.display = 'block';
+}
+
+function resetPanel() {
+  panelDefault.style.display = 'flex';
+  panelDetail.style.display  = 'none';
+  hotspots.forEach(h => h.classList.remove('active'));
+}
+
+hotspots.forEach(h => {
+  h.addEventListener('mouseenter', () => {
+    hotspots.forEach(x => x.classList.remove('active'));
+    h.classList.add('active');
+    showSensor(h.dataset.sensor);
   });
-  node.addEventListener('mouseleave', () => tip.classList.remove('show'));
+  h.addEventListener('mouseleave', resetPanel);
 });
 
 
@@ -286,3 +337,62 @@ document.addEventListener("DOMContentLoaded", () => {
     link.addEventListener("click", () => console.log("Clicked:", link.textContent));
   });
 });
+
+/* ═══════════════════════════════════════════
+   SCROLL REVEAL — IntersectionObserver
+   Tự động reveal mọi phần tử có class .reveal
+   khi chúng vào viewport
+═══════════════════════════════════════════ */
+(function initReveal() {
+  const revealObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          // Unobserve sau khi đã reveal để tiết kiệm tài nguyên
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    },
+    {
+      threshold: 0.12,   // 12% phần tử vào viewport thì kích hoạt
+      rootMargin: '0px 0px -40px 0px'  // trigger sớm hơn 1 chút
+    }
+  );
+
+  // Observe tất cả phần tử .reveal có sẵn trong DOM
+  function observeAll() {
+    document.querySelectorAll('.reveal').forEach(el => {
+      revealObserver.observe(el);
+    });
+  }
+
+  // Chạy ngay + chạy lại sau khi JS render xong team/advisor cards
+  observeAll();
+  setTimeout(observeAll, 300);
+})();
+
+
+/* ═══════════════════════════════════════════
+   TEAM CARDS — thêm reveal + stagger sau khi render
+═══════════════════════════════════════════ */
+function addRevealToCards(containerId) {
+  const container = document.getElementById(containerId);
+  if (!container) return;
+  const cards = container.querySelectorAll('.card');
+  const delays = ['delay-1','delay-2','delay-3','delay-4','delay-5','delay-6'];
+  cards.forEach((card, i) => {
+    card.classList.add('reveal');
+    if (delays[i]) card.classList.add(delays[i]);
+  });
+  // Observe newly added .reveal elements
+  document.querySelectorAll('.reveal:not(.observed)').forEach(el => {
+    el.classList.add('observed');
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -30px 0px' });
+    obs.observe(el);
+  });
+}
