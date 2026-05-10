@@ -591,3 +591,265 @@ nav {
   from { opacity: 0; }
   to   { opacity: 1; }
 }
+/* ═══════════════════════════════════════════
+   RETRACK — IMAGE HOTSPOT LAYOUT
+═══════════════════════════════════════════ */
+.retrack-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  align-items: center;
+  margin-top: 1.5rem;
+}
+
+.model-col {
+  display: flex;
+  justify-content: center;
+}
+
+.model-wrap {
+  position: relative;
+  width: 100%;
+  max-width: 340px;
+}
+
+.model-img {
+  width: 100%;
+  display: block;
+  border-radius: 12px;
+}
+
+/* Hotspot */
+.hotspot {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hotspot-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #38bdf8;
+  border: 2px solid #fff;
+  position: relative;
+  z-index: 2;
+  transition: transform 0.2s, background 0.2s;
+}
+
+.hotspot-ring {
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  border: 2px solid rgba(56,189,248,0.5);
+  animation: hotspot-pulse 2s ease-in-out infinite;
+}
+
+.hotspot:hover .hotspot-dot,
+.hotspot.active .hotspot-dot {
+  background: #1a56ff;
+  transform: scale(1.3);
+}
+
+.hotspot.active .hotspot-ring {
+  border-color: rgba(26,86,255,0.6);
+}
+
+@keyframes hotspot-pulse {
+  0%, 100% { transform: scale(1); opacity: 0.7; }
+  50%       { transform: scale(1.5); opacity: 0; }
+}
+
+/* Info panel */
+.info-col {
+  display: flex;
+  align-items: center;
+}
+
+.sensor-panel {
+  background: var(--brand-card);
+  border: 1px solid var(--brand-border);
+  border-radius: 16px;
+  padding: 2rem;
+  width: 100%;
+  min-height: 320px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.panel-default {
+  text-align: center;
+  color: var(--text-dim);
+}
+
+.panel-default .panel-icon svg {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 12px;
+}
+
+.panel-default p {
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: var(--text-dim);
+}
+
+.panel-detail {
+  width: 100%;
+}
+
+.panel-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 16px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--brand-border);
+}
+
+.panel-icon-wrap {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: rgba(26,86,255,0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.panel-icon-wrap svg {
+  width: 24px;
+  height: 24px;
+}
+
+.panel-header h3 {
+  font-family: 'Be Vietnam Pro', sans-serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0 0 4px;
+}
+
+.panel-header span {
+  font-size: 0.78rem;
+  color: var(--brand-sky);
+}
+
+#panelDesc {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  line-height: 1.75;
+  margin-bottom: 20px;
+}
+
+.panel-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.stat-box {
+  background: var(--brand-surface);
+  border-radius: 10px;
+  padding: 10px 14px;
+  border: 1px solid var(--brand-border);
+}
+
+.stat-box .stat-label {
+  font-size: 0.7rem;
+  color: var(--text-dim);
+  margin-bottom: 4px;
+}
+
+.stat-box .stat-value {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--brand-sky);
+}
+
+@media (max-width: 768px) {
+  .retrack-layout {
+    grid-template-columns: 1fr;
+  }
+  .model-wrap { max-width: 260px; }
+  .sensor-panel { min-height: 240px; }
+}
+
+/* ═══════════════════════════════════════════
+   DEVICES SECTION
+═══════════════════════════════════════════ */
+.devices-section {
+  max-width: 860px;
+  margin: 48px auto 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.device-card {
+  background: var(--brand-card);
+  border: 1px solid var(--brand-border);
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 20px 24px;
+  transition: border-color 0.2s, transform 0.2s;
+}
+
+.device-card:hover {
+  border-color: var(--brand-sky);
+  transform: translateX(4px);
+}
+
+.device-img-wrap {
+  width: 110px;
+  height: 80px;
+  flex-shrink: 0;
+  border-radius: 10px;
+  overflow: hidden;
+  background: var(--brand-surface);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.device-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.device-info h4 {
+  font-family: 'Be Vietnam Pro', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0 0 6px;
+}
+
+.device-info p {
+  font-size: 0.82rem;
+  color: var(--text-dim);
+  line-height: 1.7;
+  margin: 0;
+}
+
+@media (max-width: 500px) {
+  .device-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .device-img-wrap {
+    width: 100%;
+    height: 140px;
+  }
+}
