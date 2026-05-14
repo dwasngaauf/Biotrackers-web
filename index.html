@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Biotrackers</title>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="topbar">
+  <div class="topbar-left">
+    <span>✉ biotrackers2025@gmail.com</span>
+    <span>📍Đại học Bách Khoa Hà Nội</span>
+  </div>
+  <div class="topbar-right">
+    <a href="#">Help</a>
+    <span class="topbar-divider">/</span>
+    <a href="#">Support</a>
+    <span class="topbar-divider">|</span>
+    <a href="#">Contact</a>
+    <div class="socials">
+      <a href="#">𝕏</a><a href="#">f</a><a href="#">𝑃</a><a href="#">◻</a>
+    </div>
+  </div>
+</div>
+
+<!-- NAVBAR -->
+<nav>
+  <a class="logo" href="#">
+    <div class="logo-box"><img src="assets/logo (2).jpg" alt="Biotrackers Logo"></div>
+    Biotrackers
+  </a>
+  <ul class="nav-links">
+    <li><a href="#hero" class="active">Trang chủ</a></li>
+    <li><a href="#team">Đội ngũ</a></li>
+    <li><a href="#achievements">Thành tích</a></li>
+    <li><a href="#retrack">Về Retrack</a></li>
+  </ul>
+  <div class="nav-icons">
+    <button aria-label="Search">
+      <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+    </button>
+    <button aria-label="Menu">
+      <svg viewBox="0 0 24 24"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="hero">
+  <div class="hero-bg"></div>
+  <div class="accent-tl"></div>
+  <div class="blob"></div>
+  <svg class="curve-br" width="220" height="220" viewBox="0 0 220 220" fill="none">
+    <path d="M220 220 C150 220 0 165 0 55 L0 220 Z" fill="#1a56ff" opacity=".28"/>
+    <path d="M220 220 C170 220 65 205 22 118 L22 220 Z" fill="#1a56ff" opacity=".5"/>
+  </svg>
+  <div class="hero-content">
+    <p class="hero-label">Biotrackers</p>
+    <h1 class="hero-title">Hồi phục thông minh<br>Vững bước tương lai</h1>
+    <a href="#" class="hero-cta" onclick="openVideo(event)">
+      <div class="play-icon">
+        <svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+      </div>
+      Explore More
+    </a>
+  </div>
+</section>
+
+<!-- VIDEO MODAL -->
+<div id="videoModal" class="video-modal" data-yt-id="">
+  <div class="video-container" id="videoContainer">
+    <iframe id="ytPlayer" src=""
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen></iframe>
+  </div>
+</div>
+
+<!-- TEAM -->
+<section id="team" class="section-team">
+  <div class="wrap">
+    <div class="hd reveal">
+      <h2>Đội ngũ <span>Biotrackers</span></h2>
+      <p>"làm HẾT VIỆC nhưng KHÔNG HẾT GIỜ"</p>
+    </div>
+    <div class="grid" id="g"></div>
+  </div>
+</section>
+
+<!-- ADVISOR -->
+<section id="advisor" class="section-advisor">
+  <div class="wrap">
+    <div class="hd reveal"><h2><span>Cố vấn</span></h2></div>
+    <div class="featured reveal from-left" id="featured"></div>
+    <div class="grid advisor-grid" id="advisor-grid"></div>
+  </div>
+</section>
+
+<!-- ACHIEVEMENTS -->
+<section class="achievements" id="achievements">
+  <div class="achievements-header reveal">
+    <div class="section-tag">
+      <div class="tag-icon"><i class="fas fa-trophy"></i></div>
+      <span class="tag-text">Thành Tích</span>
+    </div>
+    <h2 class="section-title">Những Thành Tích<br/>Nổi Bật Của <span class="accent">Chúng Tôi</span></h2>
+  </div>
+  <div class="slider-wrapper reveal">
+    <div class="slider-track-outer">
+      <div class="slider-track" id="sliderTrack">
+
+        <div class="ach-card">
+          <div class="card-img-placeholder">
+            <img src="assets/svstartup.jpg" class="card-img">
+            <div class="card-overlay"><a href="https://www.facebook.com/share/p/18DJa6y8pQ/" target="_blank" class="card-overlay-icon"><i class="fas fa-external-link-alt"></i></a></div>
+          </div>
+          <div class="card-body">
+            <span class="card-badge">Giải thưởng</span>
+            <h3 class="card-title">Giải quán quân SV-STARTUP lần thứ VIII</h3>
+            <p class="card-desc">Trong lĩnh vực Y tế - Sức khỏe - Đời sống, BIOTRACKERS giành chiến thắng với hệ thống hỗ trợ theo dõi phục hồi chức năng sau đột quỵ.</p>
+            <a href="https://www.facebook.com/share/p/19hq4Qdnum/" class="read-more" target="_blank">Read More <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <div class="ach-card">
+          <div class="card-img-placeholder">
+            <img src="assets/STT.jpg" class="card-img">
+            <div class="card-overlay"><a href="https://www.facebook.com/share/p/1HNRuLTrUy/" target="_blank" class="card-overlay-icon"><i class="fas fa-external-link-alt"></i></a></div>
+          </div>
+          <div class="card-body">
+            <span class="card-badge">Giải thưởng</span>
+            <h3 class="card-title">Quán quân cuộc thi Sáng tạo trẻ 2025</h3>
+            <p class="card-desc">ReTrack đưa ra giải pháp mà Việt Nam chưa có sản phẩm nội địa tương đương: Kết hợp dữ liệu chuyển động (IMU) và sinh hiệu trong cùng một nền tảng.</p>
+            <a href="https://www.facebook.com/share/p/1HNRuLTrUy/" class="read-more" target="_blank">Read More <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <div class="ach-card">
+          <div class="card-img-placeholder">
+            <img src="assets/demoday.jpg" class="card-img">
+            <div class="card-overlay"><a href="https://www.facebook.com/share/p/1QUYv4w3P7/" target="_blank" class="card-overlay-icon"><i class="fas fa-external-link-alt"></i></a></div>
+          </div>
+          <div class="card-body">
+            <span class="card-badge">Giải thưởng</span>
+            <h3 class="card-title">Investors' choice awards tại Venture X Demo Day 2025</h3>
+            <p class="card-desc">Tại Demo Day, BIOTRACKERS xuất sắc giành ngôi vị cao nhất với dự án ReTrack – hệ thống theo dõi phục hồi chi dưới sau đột quỵ.</p>
+            <a href="https://www.facebook.com/share/p/1QUYv4w3P7/" class="read-more" target="_blank">Read More <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <div class="ach-card">
+          <div class="card-img-placeholder">
+            <img src="assets/Vinmotionlab.png" class="card-img">
+            <div class="card-overlay"><a href="#" class="card-overlay-icon"><i class="fas fa-external-link-alt"></i></a></div>
+          </div>
+          <div class="card-body">
+            <span class="card-badge">Kiểm định</span>
+            <h3 class="card-title">Sản phẩm IMU được kiểm tra sai số tại Vin Motion Lab</h3>
+            <p class="card-desc">Kết quả thử nghiệm cho thấy sai số nằm trong ngưỡng cho phép, đảm bảo độ tin cậy cao trong thu thập và xử lý dữ liệu.</p>
+            <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <div class="ach-card">
+          <div class="card-img-placeholder">
+            <img src="assets/ichst.jpg" class="card-img">
+            <div class="card-overlay"><a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=11428761" target="_blank" class="card-overlay-icon"><i class="fas fa-external-link-alt"></i></a></div>
+          </div>
+          <div class="card-body">
+            <span class="card-badge">Nghiên cứu</span>
+            <h3 class="card-title">Bài báo về hệ thống IMU được chấp nhận tại ICHST 2025</h3>
+            <p class="card-desc">Việc được hội nghị quốc tế chấp nhận khẳng định tính mới và giá trị khoa học, mở ra cơ hội trao đổi với cộng đồng chuyên gia.</p>
+            <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=11428761" class="read-more" target="_blank">Read More <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <div class="ach-card">
+          <div class="card-img-placeholder">
+            <img src="assets/ventureday.jpg" class="card-img">
+            <div class="card-overlay"><a href="#" class="card-overlay-icon"><i class="fas fa-external-link-alt"></i></a></div>
+          </div>
+          <div class="card-body">
+            <span class="card-badge">Hợp tác</span>
+            <h3 class="card-title">Có gian trại tại BKFund Venture Day</h3>
+            <p class="card-desc">Các đại biểu đánh giá cao tính thực tiễn – minh chứng sinh động cho năng lực nghiên cứu và đổi mới sáng tạo của ĐHBKHN.</p>
+            <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <div class="ach-card">
+          <div class="card-img-placeholder">
+            <img src="assets/univentures.jpg" class="card-img">
+            <div class="card-overlay"><a href="https://www.facebook.com/share/p/1BCS3eZiW4/" target="_blank" class="card-overlay-icon"><i class="fas fa-external-link-alt"></i></a></div>
+          </div>
+          <div class="card-body">
+            <span class="card-badge">Giải thưởng</span>
+            <h3 class="card-title">Dự án Top 30 Univentures 2025</h3>
+            <p class="card-desc">Đội thi xuất sắc chứng minh nỗ lực và bản lĩnh startup để lọt vào Top 30 UniVentures 2025.</p>
+            <a href="https://www.facebook.com/share/p/1BCS3eZiW4/" class="read-more" target="_blank">Read More <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <div class="ach-card">
+          <div class="card-img-placeholder">
+            <img src="assets/dmst.jpg" class="card-img">
+            <div class="card-overlay"><a href="https://hust.edu.vn/vi/news/khoa-hoc-cong-nghe-dmst/dai-hoc-bach-khoa-ha-noi-dong-hanh-cung-hanh-trinh-doi-moi-sang-tao-thu-do-655744.html" target="_blank" class="card-overlay-icon"><i class="fas fa-external-link-alt"></i></a></div>
+          </div>
+          <div class="card-body">
+            <span class="card-badge">Hợp tác</span>
+            <h3 class="card-title">Có gian trại tại Lễ ra mắt Mạng lưới Đổi mới sáng tạo</h3>
+            <p class="card-desc">Mở ra cơ hội kết nối, hợp tác và phát triển trong hệ sinh thái đổi mới sáng tạo.</p>
+            <a href="https://hust.edu.vn/vi/news/khoa-hoc-cong-nghe-dmst/dai-hoc-bach-khoa-ha-noi-dong-hanh-cung-hanh-trinh-doi-moi-sang-tao-thu-do-655744.html" class="read-more" target="_blank">Read More <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div class="slider-nav">
+      <button class="nav-btn" id="prevBtn" onclick="slide(-1)" disabled></button>
+      <div class="slider-dots" id="dotsContainer"></div>
+      <button class="nav-btn" id="nextBtn" onclick="slide(1)"></button>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     RETRACK SECTION
+══════════════════════════════════════ -->
+<section id="retrack" class="section-retrack">
+  <div class="retrack-scene reveal">
+
+    <!-- Header -->
+    <div class="retrack-header">
+      <div class="retrack-title">RE<span>TRACK</span></div>
+      <div class="retrack-subtitle">Hệ thống hỗ trợ theo dõi và đánh giá quá trình phục hồi chức năng sau đột quỵ</div>
+    </div>
+
+    <!-- 2 cột: trái = model, phải = sensor info + thiết bị -->
+    <div class="retrack-body">
+
+      <!-- TRÁI: model + hotspot -->
+      <div class="retrack-left">
+        <div class="model-wrap" id="modelWrap">
+          <img src="assets/model.jpg" alt="BioTrackers model" class="model-img">
+
+          <div class="hotspot" style="top:18%;left:45%;" data-sensor="shoulder">
+            <div class="hotspot-dot"></div><div class="hotspot-ring"></div>
+          </div>
+          <div class="hotspot" style="top:24%;left:40%;" data-sensor="upperarm">
+            <div class="hotspot-dot"></div><div class="hotspot-ring"></div>
+          </div>
+          <div class="hotspot" style="top:22%;left:58%;" data-sensor="chest">
+            <div class="hotspot-dot"></div><div class="hotspot-ring"></div>
+          </div>
+          <div class="hotspot" style="top:36%;left:59%;" data-sensor="naka">
+            <div class="hotspot-dot"></div><div class="hotspot-ring"></div>
+          </div>
+          <div class="hotspot" style="top:40.5%;left:32%;" data-sensor="forearm">
+            <div class="hotspot-dot"></div><div class="hotspot-ring"></div>
+          </div>
+          <div class="hotspot" style="top:58%;left:54%;" data-sensor="hip">
+            <div class="hotspot-dot"></div><div class="hotspot-ring"></div>
+          </div>
+          <div class="hotspot" style="top:77%;left:55%;" data-sensor="knee">
+            <div class="hotspot-dot"></div><div class="hotspot-ring"></div>
+          </div>
+          <div class="hotspot" style="top:94.5%;left:67.5%;" data-sensor="ankle">
+            <div class="hotspot-dot"></div><div class="hotspot-ring"></div>
+          </div>
+        </div>
+        <div class="hint">Rê chuột vào cảm biến để xem chi tiết</div>
+      </div>
+
+      <!-- PHẢI: sensor panel (trên) + 4 thiết bị (dưới) -->
+      <div class="retrack-right">
+
+        <!-- Khung sensor info -->
+        <div class="sensor-panel" id="sensorPanel">
+          <div class="panel-default" id="panelDefault">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="22" height="22">
+              <circle cx="12" cy="12" r="10"/><path d="M12 8v4m0 4h.01"/>
+            </svg>
+            <span>Rê chuột vào cảm biến để xem chi tiết</span>
+          </div>
+          <div class="panel-detail" id="panelDetail" style="display:none;">
+            <div class="panel-icon-wrap" id="panelIconWrap"></div>
+            <div class="panel-text">
+              <h3 id="panelName"></h3>
+              <span id="panelPos"></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4 thiết bị -->
+        <div class="device-card reveal delay-1">
+          <div class="device-img-wrap">
+            <img src="assets/thietbitheodoinhiptim.png" alt="Thiết bị theo dõi nhịp tim">
+          </div>
+          <div class="device-info">
+            <h4>Thiết bị theo dõi nhịp tim</h4>
+            <p>Cảm biến ECG đeo ngực, ghi nhận tín hiệu điện tim liên tục 24/7.</p>
+          </div>
+        </div>
+
+        <div class="device-card reveal delay-2">
+          <div class="device-img-wrap">
+            <img src="assets/thietbidoluong.png" alt="Thiết bị đo lường">
+          </div>
+          <div class="device-info">
+            <h4>Thiết bị đo lường (IMU)</h4>
+            <p>Cảm biến IMU + EMG gắn tại các khớp, đo góc và hoạt động cơ bắp.</p>
+          </div>
+        </div>
+
+        <div class="device-card reveal delay-3">
+          <div class="device-img-wrap">
+            <img src="assets/hoptrungtam.png" alt="Hộp trung tâm">
+          </div>
+          <div class="device-info">
+            <h4>Hộp trung tâm</h4>
+            <p>Xử lý bằng AI để hỗ trợ phân tích dữ liệu và ứng dụng Digital Twin.</p>
+          </div>
+        </div>
+
+        <div class="device-card reveal delay-4">
+          <div class="device-img-wrap">
+            <img src="assets/giaodien.jpg" alt="Nền tảng web">
+          </div>
+          <div class="device-info">
+            <h4>Nền tảng web chăm sóc & theo dõi phục hồi</h4>
+            <p>Trực quan hóa dữ liệu, hướng dẫn bài tập, chatbot, lưu trữ hồ sơ.</p>
+          </div>
+        </div>
+
+      </div><!-- end retrack-right -->
+    </div><!-- end retrack-body -->
+  </div><!-- end retrack-scene -->
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-container reveal">
+    <div class="footer-col">
+      <h3>BioTrackers</h3>
+      <p>Hồi phục thông minh</p>
+      <p>Vững bước tương lai</p>
+    </div>
+    <div class="footer-col">
+      <h4>Liên kết</h4>
+      <ul>
+        <li><a href="#team">Đội ngũ</a></li>
+        <li><a href="#achievements">Thành tích</a></li>
+        <li><a href="#">Tin tức</a></li>
+        <li><a href="#retrack">Sản phẩm</a></li>
+        <li><a href="#">Hướng dẫn sử dụng</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Liên hệ</h4>
+      <p>Email: <a href="mailto:biotrackers2025@gmail.com">biotrackers2025@gmail.com</a></p>
+      <p>Địa điểm: Đại học Bách Khoa Hà Nội, Việt Nam</p>
+    </div>
+  </div>
+  <div class="footer-bottom">© 2025 BioTrackers. All rights reserved.</div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
