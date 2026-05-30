@@ -60,7 +60,7 @@ const members = [
   { name: "Bùi Thị Khánh Linh",    role: "CMO",                              img: "assets/Linh.jpg",    init: "Bùi Thị Khánh Linh", fb: "https://www.facebook.com/khanhlinh.05062005?locale=vi_VN",            ig: "https://www.instagram.com/_khanh.linh.56_/" },
   { name: "Phùng Tuấn Anh",        role: "CFO",                              img: "assets/TuấnAnh.png", init: "Phùng Tuấn Anh",     fb: "https://www.facebook.com/tuananhhh27?locale=vi_VN",                    ig: "https://www.instagram.com/phgtuananh" },
   { name: "Đặng Quỳnh Dương",      role: "AI & Software Engineering",        img: "assets/Dương.jpg",   init: "Quỳnh Dương",         fb: "https://www.facebook.com/quuuuuuuuynhduuuuuuuuong/?locale=vi_VN",  gh: "https://github.com/dwasngaauf" },
-  { name: "Nguyễn Thị Hoài Thanh", role: "Marketing & Sale",                 img: "assets/Thanh.jpg",   init: "Hoài Thanh",          fb: "https://www.facebook.com/hthanhhhhhhhhhh?locale=vi_VN" },
+  { name: "Nguyễn Lê Minh Hằng", role: "Marketing & Sale",                 img: "assets/hằng.jpg",   init: "Nguyễn Lê Minh Hằng",          fb: "https://www.facebook.com/minh.hang.hanmilenguyen?locale=vi_VN" },
   { name: "Mai Lê Phú Quang",      role: "AI & Software Engineering",        img: "assets/quang2.jpg",  init: "Phú Quang",           fb: "https://www.facebook.com/quuuuuuuuynhduuuuuuuuong/?locale=vi_VN",  gh: "https://github.com/quangmlp" },
   { name: "Vũ Hải Đăng",          role: "PCB Design Engineer",               img: "assets/Đăng.jpg",    init: "Hải Đăng",            fb: "https://www.facebook.com/vu.dang.vu.dang.2025?locale=vi_VN",        threads: "https://www.threads.com/@im_dangy_dang" },
 ];
